@@ -12,6 +12,8 @@
 		A130CC6124671CFF0006EEE5 /* RadioAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130CC6024671CFF0006EEE5 /* RadioAPI.swift */; };
 		A130CC63246721020006EEE5 /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130CC62246721020006EEE5 /* StationsViewController.swift */; };
 		A130CC66246725050006EEE5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130CC65246725050006EEE5 /* Utils.swift */; };
+		A130CC68246731D10006EEE5 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A130CC67246731D10006EEE5 /* StationCell.xib */; };
+		A130CC6A2467322E0006EEE5 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130CC692467322E0006EEE5 /* StationCell.swift */; };
 		A178CF022466B862002C2360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178CF012466B862002C2360 /* AppDelegate.swift */; };
 		A178CF042466B862002C2360 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178CF032466B862002C2360 /* SceneDelegate.swift */; };
 		A178CF062466B862002C2360 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178CF052466B862002C2360 /* TagsViewController.swift */; };
@@ -27,6 +29,8 @@
 		A130CC6024671CFF0006EEE5 /* RadioAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioAPI.swift; sourceTree = "<group>"; };
 		A130CC62246721020006EEE5 /* StationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewController.swift; sourceTree = "<group>"; };
 		A130CC65246725050006EEE5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A130CC67246731D10006EEE5 /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
+		A130CC692467322E0006EEE5 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
 		A178CEFE2466B862002C2360 /* RadioStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A178CF012466B862002C2360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A178CF032466B862002C2360 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 			children = (
 				A130CC5A246714A10006EEE5 /* TagCell.xib */,
 				A130CC5E246717610006EEE5 /* TagCell.swift */,
+				A130CC67246731D10006EEE5 /* StationCell.xib */,
+				A130CC692467322E0006EEE5 /* StationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A130CC68246731D10006EEE5 /* StationCell.xib in Resources */,
 				A130CC5B246714A10006EEE5 /* TagCell.xib in Resources */,
 				A178CF112466B867002C2360 /* LaunchScreen.storyboard in Resources */,
 				A178CF1E2466C484002C2360 /* Assets.xcassets in Resources */,
@@ -213,6 +220,7 @@
 				A178CF0C2466B862002C2360 /* RadioStation.xcdatamodeld in Sources */,
 				A178CF042466B862002C2360 /* SceneDelegate.swift in Sources */,
 				A130CC66246725050006EEE5 /* Utils.swift in Sources */,
+				A130CC6A2467322E0006EEE5 /* StationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
