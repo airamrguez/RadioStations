@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,10 +21,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tags" id="HRn-Vb-1iy"/>
+                    <connections>
+                        <segue destination="fcs-RV-me6" kind="show" identifier="showStationsForTag" id="uAs-jz-9f8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8s-js-9ia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605.7971014492755" y="-7.3660714285714279"/>
+            <point key="canvasLocation" x="1594" y="-7"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ClC-Zt-yhM">
@@ -33,6 +37,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="sFM-lS-ERg">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.14580821790000001" green="0.45029995560000002" blue="0.67952558289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="0.14580821790000001" green="0.45029995560000002" blue="0.67952558289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
@@ -45,6 +52,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHp-Yl-Hge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="695.6521739130435" y="-7.3660714285714279"/>
+        </scene>
+        <!--Stations View Controller-->
+        <scene sceneID="VKR-Re-fJ4">
+            <objects>
+                <viewController id="fcs-RV-me6" customClass="StationsViewController" customModule="RadioStation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hfl-hL-YFh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8s9-qw-Kxv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fcs-RV-me6" id="hMP-yF-Q6u"/>
+                                    <outlet property="delegate" destination="fcs-RV-me6" id="8z7-Zr-W1G"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gNO-4L-2Xl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PLm-6z-9sH"/>
+                    <connections>
+                        <outlet property="tableView" destination="8s9-qw-Kxv" id="3rA-F3-qPF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uTi-tV-T5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2430.434782608696" y="-7.3660714285714279"/>
         </scene>
     </scenes>
 </document>

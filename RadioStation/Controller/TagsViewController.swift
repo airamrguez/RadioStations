@@ -18,15 +18,8 @@ class TagsViewController: UITableViewController {
         // Do any additional setup after loading the view.
         tableView.register(UINib(nibName: "TagCell", bundle: nil), forCellReuseIdentifier: TagCellIdentifier)
         
-        addBackgroundImage()
+        Utils.addBackgroundImage(tableView)
         downloadRadioStations()
-    }
-    
-    // MARK: - UI
-    private func addBackgroundImage() {
-        let bgImage = UIImageView(image: UIImage(named: "AppBackground"))
-        bgImage.frame = tableView.frame
-        tableView.backgroundView = bgImage
     }
     
     // MARK: - Logic
@@ -44,7 +37,7 @@ class TagsViewController: UITableViewController {
 // MARK: - Table view delegate
 extension TagsViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        performSegue(withIdentifier: "showStationsForTag", sender: self)
     }
 }
 
