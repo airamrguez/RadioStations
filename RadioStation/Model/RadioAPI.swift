@@ -14,23 +14,18 @@ enum RadioAPI {
     
     static let TagsURL = "\(BaseURL)\(Format)/tags"
     
-    static func getTags(onComplete: @escaping(([String]) -> Void)) {
+    static func getTags(onComplete: @escaping(([Tag]) -> Void)) {
         guard let url = URL(string: TagsURL) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
-            do {
-                guard let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [Any] else { return }
-                guard let jsonArray = jsonResponse as? [[String: Any]] else { return }
-                
-                var tags = [String]()
-                for object in jsonArray {
-                    guard let name = object["name"] as? String else { return }
-                    tags.append(name)
-                }
-                onComplete(tags)
-            } catch let error {
-                print(error)
-            }
+            guard let tags = try? JSONDecoder().decode([Tag].self, from: data) else { return }
+            onComplete(tags)
+            
         }.resume()
     }
+}
+
+struct Tag: Decodable {
+    let name: String
+    let stationcount: Int
 }

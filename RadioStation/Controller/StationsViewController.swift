@@ -11,9 +11,12 @@ import UIKit
 class StationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
+    var tag: Tag?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.navigationItem.title = tag?.name ?? "Default value"
         Utils.addBackgroundImage(tableView)
     }
 }

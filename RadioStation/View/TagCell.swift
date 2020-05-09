@@ -12,7 +12,8 @@ class TagCell: UITableViewCell {
 
     @IBOutlet weak var genreInitialLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
-
+    @IBOutlet weak var stationsCountLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

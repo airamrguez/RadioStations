@@ -23,9 +23,16 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="genreLetterLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2M0-yY-oiU">
-                        <rect key="frame" x="83" y="11" width="311" height="38"/>
+                        <rect key="frame" x="83" y="11" width="182" height="38"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="stationsCount" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wU-5e-z8t">
+                        <rect key="frame" x="273" y="11" width="121" height="38"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -34,6 +41,7 @@
             <connections>
                 <outlet property="genreInitialLabel" destination="1vz-8P-asc" id="x3J-dQ-Vwx"/>
                 <outlet property="genreLabel" destination="2M0-yY-oiU" id="jQ6-j3-eyM"/>
+                <outlet property="stationsCountLabel" destination="4wU-5e-z8t" id="0DB-eW-Ava"/>
             </connections>
             <point key="canvasLocation" x="-23.188405797101453" y="66.964285714285708"/>
         </tableViewCell>
