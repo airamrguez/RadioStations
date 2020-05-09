@@ -11,7 +11,7 @@ import UIKit
 class TagsViewController: UITableViewController {
     private let TagCellIdentifier = "TagCell"
 
-    var tempTags = ["Jazz", "Blues", "Classical", "Country"]
+    var tempTags: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +19,25 @@ class TagsViewController: UITableViewController {
         tableView.register(UINib(nibName: "TagCell", bundle: nil), forCellReuseIdentifier: TagCellIdentifier)
         
         addBackgroundImage()
+        downloadRadioStations()
     }
     
+    // MARK: - UI
     private func addBackgroundImage() {
         let bgImage = UIImageView(image: UIImage(named: "AppBackground"))
         bgImage.frame = tableView.frame
         tableView.backgroundView = bgImage
+    }
+    
+    // MARK: - Logic
+    private func downloadRadioStations() {
+        RadioAPI.getTags() { [weak self] (tags) in
+            guard let self = self else { return }
+            self.tempTags = tags
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 
