@@ -15,6 +15,7 @@
 		A130CC68246731D10006EEE5 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A130CC67246731D10006EEE5 /* StationCell.xib */; };
 		A130CC6A2467322E0006EEE5 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130CC692467322E0006EEE5 /* StationCell.swift */; };
 		A130CC6C246810850006EEE5 /* RadioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130CC6B246810850006EEE5 /* RadioPlayerViewController.swift */; };
+		A130CC6E246812DE0006EEE5 /* UIImageView+UrlImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130CC6D246812DE0006EEE5 /* UIImageView+UrlImage.swift */; };
 		A178CF022466B862002C2360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178CF012466B862002C2360 /* AppDelegate.swift */; };
 		A178CF042466B862002C2360 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178CF032466B862002C2360 /* SceneDelegate.swift */; };
 		A178CF062466B862002C2360 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178CF052466B862002C2360 /* TagsViewController.swift */; };
@@ -33,6 +34,7 @@
 		A130CC67246731D10006EEE5 /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
 		A130CC692467322E0006EEE5 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
 		A130CC6B246810850006EEE5 /* RadioPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayerViewController.swift; sourceTree = "<group>"; };
+		A130CC6D246812DE0006EEE5 /* UIImageView+UrlImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+UrlImage.swift"; sourceTree = "<group>"; };
 		A178CEFE2466B862002C2360 /* RadioStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A178CF012466B862002C2360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A178CF032466B862002C2360 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		A178CF1C2466B8C9002C2360 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A130CC6D246812DE0006EEE5 /* UIImageView+UrlImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				A178CF022466B862002C2360 /* AppDelegate.swift in Sources */,
 				A178CF0C2466B862002C2360 /* RadioStation.xcdatamodeld in Sources */,
 				A178CF042466B862002C2360 /* SceneDelegate.swift in Sources */,
+				A130CC6E246812DE0006EEE5 /* UIImageView+UrlImage.swift in Sources */,
 				A130CC66246725050006EEE5 /* Utils.swift in Sources */,
 				A130CC6A2467322E0006EEE5 /* StationCell.swift in Sources */,
 			);

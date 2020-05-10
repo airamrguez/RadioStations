@@ -20,6 +20,7 @@ class RadioPlayerViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = station?.name ?? "Default station"
+        stationPicture.imageFromURL(url: station?.favicon ?? "", defaultImage: "RadioStation")
     }
     
     @IBAction func playStopButtonPressed(_ sender: Any) {

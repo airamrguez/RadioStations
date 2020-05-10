@@ -58,6 +58,7 @@ extension StationsViewController {
         cell.backgroundColor = UIColor.clear
         
         if let station = stations?[indexPath.row] {
+            cell.stationImageView.imageFromURL(url: station.favicon, defaultImage: "RadioStation")
             cell.stationNameLabel.text = station.name
         }
         
@@ -65,7 +66,7 @@ extension StationsViewController {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 100
     }
 }
 
