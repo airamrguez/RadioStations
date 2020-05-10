@@ -20,7 +20,9 @@
                             <outlet property="delegate" destination="4G3-Uq-UvT" id="rRr-TT-Zou"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tags" id="HRn-Vb-1iy"/>
+                    <navigationItem key="navigationItem" title="Tags" id="HRn-Vb-1iy">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="StarIcon" id="dr4-po-qQx"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="fcs-RV-me6" kind="show" identifier="showStationsForTag" id="uAs-jz-9f8"/>
                     </connections>
@@ -100,10 +102,10 @@
                                 <rect key="frame" x="87" y="167" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5y-LI-zDo">
-                                <rect key="frame" x="87" y="514" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5y-LI-zDo">
+                                <rect key="frame" x="88" y="504" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" backgroundImage="PlayIcon"/>
                                 <connections>
                                     <action selector="playStopButtonPressed:" destination="kCs-I2-WBc" eventType="touchUpInside" id="Ou5-8z-eYp"/>
                                 </connections>
@@ -111,14 +113,15 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MmJ-B2-cGf">
                                 <rect key="frame" x="85" y="436" width="244" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="volumeSliderChange:" destination="kCs-I2-WBc" eventType="valueChanged" id="JsR-oB-czX"/>
+                                    <action selector="volumeSliderChanged:" destination="kCs-I2-WBc" eventType="valueChanged" id="XbH-PT-xHa"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtg-v8-mXN">
-                                <rect key="frame" x="281" y="534" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtg-v8-mXN">
+                                <rect key="frame" x="251" y="504" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" backgroundImage="AddFavoriteIcon"/>
                                 <connections>
                                     <action selector="favButtonPressed:" destination="kCs-I2-WBc" eventType="touchUpInside" id="GcU-xy-fys"/>
                                 </connections>
@@ -141,6 +144,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AddFavoriteIcon" width="93" height="93"/>
         <image name="AppBackground" width="1936" height="2592"/>
+        <image name="PlayIcon" width="93" height="93"/>
+        <image name="StarIcon" width="24" height="24"/>
     </resources>
 </document>
