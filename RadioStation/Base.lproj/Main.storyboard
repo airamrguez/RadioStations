@@ -77,11 +77,70 @@
                     <navigationItem key="navigationItem" id="PLm-6z-9sH"/>
                     <connections>
                         <outlet property="tableView" destination="8s9-qw-Kxv" id="3rA-F3-qPF"/>
+                        <segue destination="kCs-I2-WBc" kind="show" identifier="showPlayer" id="6I5-jL-Ksi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTi-tV-T5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2430.434782608696" y="-7.3660714285714279"/>
         </scene>
+        <!--Radio Player View Controller-->
+        <scene sceneID="1eA-6s-YlI">
+            <objects>
+                <viewController id="kCs-I2-WBc" customClass="RadioPlayerViewController" customModule="RadioStation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WRJ-Rb-9ok">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppBackground" translatesAutoresizingMaskIntoConstraints="NO" id="AOT-li-O5k">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3e0-5h-zAc">
+                                <rect key="frame" x="87" y="102" width="240" height="237"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MmJ-B2-cGf">
+                                <rect key="frame" x="85" y="371" width="244" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="volumeSliderChange:" destination="kCs-I2-WBc" eventType="valueChanged" id="JsR-oB-czX"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtg-v8-mXN">
+                                <rect key="frame" x="281" y="469" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="favButtonPressed:" destination="kCs-I2-WBc" eventType="touchUpInside" id="GcU-xy-fys"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5y-LI-zDo">
+                                <rect key="frame" x="87" y="449" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="playStopButtonPressed:" destination="kCs-I2-WBc" eventType="touchUpInside" id="Ou5-8z-eYp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="jyW-fT-gm5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZEO-9T-G87"/>
+                    <connections>
+                        <outlet property="favButton" destination="mtg-v8-mXN" id="65U-Id-c3I"/>
+                        <outlet property="playStopButton" destination="q5y-LI-zDo" id="QUk-Mg-PCa"/>
+                        <outlet property="stationPicture" destination="3e0-5h-zAc" id="et5-c1-8k3"/>
+                        <outlet property="volumeSlider" destination="MmJ-B2-cGf" id="3rx-M6-jbi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wll-26-jOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3243.4782608695655" y="-7.3660714285714279"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="AppBackground" width="1936" height="2592"/>
+    </resources>
 </document>

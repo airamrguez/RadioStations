@@ -37,6 +37,15 @@ class StationsViewController: UIViewController, UITableViewDelegate, UITableView
         Utils.addBackgroundImage(tableView)
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPlayer",
+            let radioPlayerVC = segue.destination as? RadioPlayerViewController {
+            guard let selectedStation = sender as? Station else { return }
+            print(selectedStation)
+            radioPlayerVC.station = selectedStation
+        }
+    }
 }
 
 extension StationsViewController {
@@ -61,5 +70,7 @@ extension StationsViewController {
 }
 
 extension StationsViewController {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showPlayer", sender: stations?[indexPath.row])
+    }
 }
