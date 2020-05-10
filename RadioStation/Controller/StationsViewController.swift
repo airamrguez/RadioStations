@@ -20,7 +20,7 @@ class StationsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "StationCell", bundle: nil), forCellReuseIdentifier: StationCellIdentifier)
-        self.navigationItem.title = tag?.name ?? "Default value"
+        self.navigationItem.title = tag?.name ?? "Favoritos"
         
         if let tag = tag {
             RadioAPI.getStations(for: tag.name) { stations in

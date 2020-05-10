@@ -27,6 +27,10 @@ class TagsViewController: UITableViewController {
             let stationsVC = segue.destination as? StationsViewController {
             guard let selectedTag = sender as? Tag else { return }
             stationsVC.tag = selectedTag
+        } else if segue.identifier == "showFavourites",
+            let stationsVC = segue.destination as? StationsViewController {
+            guard let favouriteStations = sender as? [Station] else { return }
+            stationsVC.stations = favouriteStations
         }
     }
     
@@ -38,6 +42,12 @@ class TagsViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    @IBAction func starButtonPressed(_ sender: Any) {
+        performSegue(
+            withIdentifier: "showFavourites",
+            sender: DirbleAPI.fetchFavouriteStations())
     }
 }
 

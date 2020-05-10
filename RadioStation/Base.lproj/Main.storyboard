@@ -21,10 +21,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tags" id="HRn-Vb-1iy">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="StarIcon" id="dr4-po-qQx"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="StarIcon" id="dr4-po-qQx">
+                            <connections>
+                                <action selector="starButtonPressed:" destination="4G3-Uq-UvT" id="xft-iN-tqg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="fcs-RV-me6" kind="show" identifier="showStationsForTag" id="uAs-jz-9f8"/>
+                        <segue destination="fcs-RV-me6" kind="show" identifier="showFavourites" id="fsT-xw-Ful"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8s-js-9ia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -143,6 +148,9 @@
             <point key="canvasLocation" x="3243.4782608695655" y="-7.3660714285714279"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fsT-xw-Ful"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="AddFavoriteIcon" width="93" height="93"/>
         <image name="AppBackground" width="1936" height="2592"/>
