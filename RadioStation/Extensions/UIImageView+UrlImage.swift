@@ -16,9 +16,11 @@ extension UIImageView {
         }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let data = data {
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                if let data = data, let mimeType = response?.mimeType, mimeType.hasPrefix("image") {
                     self.image = UIImage(data: data)
+                } else {
+                    self.image = UIImage(named: defaultImage)
                 }
             }
         }.resume()

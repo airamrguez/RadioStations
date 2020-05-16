@@ -31,7 +31,6 @@ class StationsViewController: UIViewController, UITableViewDelegate, UITableView
                 }
             }
             let stationsURL = RadioAPI.stationsForTagURL(categoryID: tag.name)
-            print(stationsURL)
         }
         
         Utils.addBackgroundImage(tableView)
